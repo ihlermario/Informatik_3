@@ -4,7 +4,7 @@
 #include "CLI/CLI.hpp"
 #include "config.h"
 
-int counter = 20;
+int counter = 87;
 
 auto main(int argc, char **argv) -> int
 {

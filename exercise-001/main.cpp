@@ -28,6 +28,7 @@ auto main(int argc, char **argv) -> int
             random_nums.push_back(random);
             std::cout << "Random numbers:" << random << "\n";
         }
+        fmt::print("vektor:\n{}\n",fmt::join(random_nums, " und\n"));
     }
     catch (const CLI::ParseError &e)
     {
@@ -40,7 +41,7 @@ auto main(int argc, char **argv) -> int
      * More info at https://fmt.dev/latest/api.html
      */
     fmt::print("Hello, {}!\n", app.get_name());
-    std::cout << "count: " << count;
+    
 
     /* INSERT YOUR CODE HERE */
 

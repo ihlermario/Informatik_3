@@ -28,6 +28,7 @@ auto main(int argc, char **argv) -> int
             random_nums.push_back(random);
             std::cout << "Random numbers:" << random << "\n";
         }
+        sort(random_nums.begin(), random_nums.end());
         fmt::print("vektor:\n{}\n",fmt::join(random_nums, " und\n"));
     }
     catch (const CLI::ParseError &e)

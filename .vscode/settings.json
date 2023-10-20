@@ -103,7 +103,14 @@
         "*.ipp": "cpp",
         "complex": "cpp",
         "armadillo": "cpp",
-        "shared_mutex": "cpp"
+        "shared_mutex": "cpp",
+        "forward_list": "cpp",
+        "ranges": "cpp",
+        "span": "cpp",
+        "valarray": "cpp",
+        "any": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp"
     },
     "cSpell.language": "en,en-GB",
     "cSpell.words": [

@@ -28,8 +28,12 @@ auto main(int argc, char **argv) -> int
             random_nums.push_back(random);
             std::cout << "Random numbers:" << random << "\n";
         }
+        auto start = std::chrono::system_clock::now();
         sort(random_nums.begin(), random_nums.end());
+        auto end = std::chrono::system_clock::now();
+        auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
         fmt::print("vektor:\n{}\n",fmt::join(random_nums, " und\n"));
+        fmt::print("Vergangene Zeit:{}\n", elapsed);
     }
     catch (const CLI::ParseError &e)
     {

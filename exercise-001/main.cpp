@@ -4,7 +4,7 @@
 #include "CLI/CLI.hpp"
 #include "config.h"
 
-int counter = 87;
+int count = 87;
 
 auto main(int argc, char **argv) -> int
 {
@@ -15,9 +15,19 @@ auto main(int argc, char **argv) -> int
     CLI::App app{PROJECT_NAME};
     try
     {
+        srand((unsigned) time(NULL));
         app.set_version_flag("-V,--version", fmt::format("{} {}", PROJECT_VER, PROJECT_BUILD_DATE));
-        app.add_option("-c,--count", counter);
+        app.add_option("-c,--count", count);
         app.parse(argc, argv);
+
+        std::vector<int> random_nums;
+        
+        for (int i = 0; i < count; i++)
+        {
+            int random = 1 + (rand() % 100);
+            random_nums.push_back(random);
+            std::cout << "Random numbers:" << random << "\n";
+        }
     }
     catch (const CLI::ParseError &e)
     {
@@ -30,7 +40,7 @@ auto main(int argc, char **argv) -> int
      * More info at https://fmt.dev/latest/api.html
      */
     fmt::print("Hello, {}!\n", app.get_name());
-    std::cout << "count: " << counter;
+    std::cout << "count: " << count;
 
     /* INSERT YOUR CODE HERE */
 

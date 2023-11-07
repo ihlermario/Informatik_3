@@ -23,7 +23,7 @@ auto main(int argc, char **argv) -> int
     }
     data.push_back(23);
 
-    fmt::print("Values of the new vector:\n");
+    fmt::print("\nValues of the new vector:\n");
 
     for (i = 0; i < data.size(); i++)
     {

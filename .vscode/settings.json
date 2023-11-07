@@ -104,11 +104,17 @@
         "complex": "cpp",
         "armadillo": "cpp",
         "shared_mutex": "cpp",
+<<<<<<< HEAD
         "forward_list": "cpp",
         "ranges": "cpp",
         "span": "cpp",
         "valarray": "cpp",
         "any": "cpp",
+=======
+        "ranges": "cpp",
+        "span": "cpp",
+        "valarray": "cpp",
+>>>>>>> solution-003
         "compare": "cpp",
         "concepts": "cpp"
     },

@@ -13,7 +13,24 @@ auto main(int argc, char **argv) -> int
     fmt::print("Hello, World!\n");
 
     /* INSERT YOUR CODE HERE */
+
     VectorInt data(20);
+    fmt::print("Values of the vector:\n");
+    int i = 0;
+    for (i = 0; i < data.size(); i++)
+    {
+        fmt::print("{},", data.at(i));
+    }
+    data.push_back(23);
+
+    fmt::print("Values of the new vector:\n");
+
+    for (i = 0; i < data.size(); i++)
+    {
+        fmt::print("{},", data.at(i));
+    }
+    
+    
 
     return 0; /* exit gracefully*/
 }
